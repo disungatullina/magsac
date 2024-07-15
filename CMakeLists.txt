@@ -59,6 +59,8 @@ else()
 	message("Glog library found.")
 endif()
 
+add_compile_definitions(GLOG_USE_GLOG_EXPORT)
+
 if(IS_MSVC)
     # Some fixes for the Glog library.
     add_definitions("-DGLOG_NO_ABBREVIATED_SEVERITIES")
